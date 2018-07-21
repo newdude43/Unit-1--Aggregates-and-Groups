@@ -1,0 +1,45 @@
+Unit 1, Lesson 2, Aggregates and Groups
+
+
+# Question 1
+
+SELECT
+    date,
+	zip,
+	MaxTemperatureF
+ FROM
+    weather
+GROUP BY MaxTemperatureF
+ORDER BY MaxTemperatureF desc 
+LIMIT 1
+
+
+# Question 2
+
+SELECT
+    COUNT (trip_id),
+	start_station
+ FROM
+    trips
+GROUP BY start_station
+
+
+# Question 3
+
+SELECT
+    trip_id,
+	duration
+ FROM
+    trips
+GROUP BY duration
+
+
+# Question 4
+
+SELECT
+    AVG (duration),
+	end_station
+FROM
+    trips 
+GROUP by end_station
+
